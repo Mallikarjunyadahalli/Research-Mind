@@ -19,15 +19,15 @@ load_dotenv()
 # agent_llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 # agent_llm = ChatGroq(model="meta-llama/llama-prompt-guard-2-22m", temperature=0)
 
-# agent_llm = ChatGoogleGenerativeAI(
-#     model="gemini-2.5-flash",
-#     temperature=0
-# )
-
-agent_llm = ChatMistralAI(
-    model="mistral-small-latest",
+agent_llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
     temperature=0
 )
+
+# agent_llm = ChatMistralAI(
+#     model="mistral-small-latest",
+#     temperature=0
+# )
 
 
 chain_llm = ChatGroq(
