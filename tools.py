@@ -44,7 +44,7 @@ def scarape_url(url: str):
         for tag in soup(['style', 'script', 'nav', 'footer']):
             tag.decompose()
 
-        return soup.get_text(separator=" ", strip=True)[:3000]
+        return soup.get_text(separator=" ", strip=True)[:2000]
 
     except Exception as e:
         return f"Something went wrong, Could not scrap the URL: {str(e)}"
