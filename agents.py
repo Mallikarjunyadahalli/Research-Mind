@@ -30,24 +30,10 @@ agent_llm = ChatMistralAI(
 )
 
 
-# Model for the writer and critic chains. They only write text and never use tools.
-# gpt-oss tries to call a built-in "web.run" tool even when none is given, which
-# causes the 400 "tool_use_failed" error. A Llama model does not do that.
-# Override without editing code:  WRITER_MODEL=<groq model name> in .env
-
-# chain_llm = ChatGroq(
-#     # model=os.getenv("WRITER_MODEL", "llama-3.3-70b-versatile"),
-#     # model="openai/gpt-oss-120b",
-#     model="qwen/qwen3.8-27b",
-
-#     temperature=0.3,
-# )
-
-
 chain_llm = ChatGroq(
     # model=os.getenv("WRITER_MODEL", "llama-3.3-70b-versatile"),
     # model="openai/gpt-oss-120b",
-    model="llama-3.1-8b-instant",
+    model="openai/gpt-oss-20b",
 
     temperature=0.3,
 )
