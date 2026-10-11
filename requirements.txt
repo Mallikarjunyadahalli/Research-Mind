@@ -27,3 +27,12 @@ traitlets==5.16.1
 typing_extensions==4.16.0
 uv==0.12.18
 wcwidth==0.9.1
+
+streamlit
+langchain
+langchain-core
+langchain-groq
+tavily-python
+beautifulsoup4
+requests
+python-dotenv
