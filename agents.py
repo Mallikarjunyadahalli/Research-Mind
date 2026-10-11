@@ -25,7 +25,7 @@ load_dotenv()
 # )
 
 agent_llm = ChatMistralAI(
-    model="llama-3.3-70b-versatile",
+    model="mistral-small-latest",
     temperature=0
 )
 
