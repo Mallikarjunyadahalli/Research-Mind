@@ -22,7 +22,8 @@ load_dotenv()
 
 agent_llm = ChatOpenAI(
     model="gpt-5.4-mini",
-    temperature=0
+    temperature=0,
+    api_key=os.getenv("OPENAI_API_KEY")
 )
 
 # agent_llm = ChatMistralAI(
