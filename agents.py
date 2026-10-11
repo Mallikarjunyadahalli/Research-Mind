@@ -209,7 +209,9 @@ agent_llm = ChatGroq(
 # Override without editing code:  WRITER_MODEL=<groq model name> in .env
 chain_llm = ChatGroq(
     # model=os.getenv("WRITER_MODEL", "llama-3.3-70b-versatile"),
-    model="openai/gpt-oss-120b",
+    # model="openai/gpt-oss-120b",
+    model="qwen/qwen3.8-27b",
+
     temperature=0.3,
 )
 
