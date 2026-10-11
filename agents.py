@@ -190,7 +190,12 @@ load_dotenv()
 # Optional speed-up if your langchain-groq version supports it:
 #   ChatGroq(model="openai/gpt-oss-20b", reasoning_effort="low")
 # agent_llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
-agent_llm = ChatGroq(model="meta-llama/llama-prompt-guard-2-22m", temperature=0)
+# agent_llm = ChatGroq(model="meta-llama/llama-prompt-guard-2-22m", temperature=0)
+
+agent_llm = ChatGroq(
+    model="llama-3.3-70b-versatile",
+    temperature=0
+)
 
 # Model for the writer and critic chains. They only write text and never use tools.
 # gpt-oss tries to call a built-in "web.run" tool even when none is given, which
