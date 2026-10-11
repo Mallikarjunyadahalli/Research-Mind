@@ -47,7 +47,7 @@ agent_llm = ChatMistralAI(
 chain_llm = ChatGroq(
     # model=os.getenv("WRITER_MODEL", "llama-3.3-70b-versatile"),
     # model="openai/gpt-oss-120b",
-    model="qwen/qwen3.8-27b",
+    model="llama-3.1-8b-instant",
 
     temperature=0.3,
 )
