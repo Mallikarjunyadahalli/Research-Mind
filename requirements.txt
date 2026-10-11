@@ -36,3 +36,4 @@ tavily-python
 beautifulsoup4
 requests
 python-dotenv
+langchain-mistralai 
