@@ -180,6 +180,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
+from langchain_mistralai import ChatMistralAI
 
 from tools import web_search, scarape_url
 
@@ -193,13 +194,13 @@ load_dotenv()
 # agent_llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 # agent_llm = ChatGroq(model="meta-llama/llama-prompt-guard-2-22m", temperature=0)
 
-agent_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0
-)
+# agent_llm = ChatGoogleGenerativeAI(
+#     model="gemini-2.5-flash",
+#     temperature=0
+# )
 
-agent_llm = ChatGroq(
-    model="openai/gpt-oss-20b",
+agent_llm = ChatMistralAI(
+    model="llama-3.3-70b-versatile",
     temperature=0
 )
 
@@ -208,6 +209,16 @@ agent_llm = ChatGroq(
 # gpt-oss tries to call a built-in "web.run" tool even when none is given, which
 # causes the 400 "tool_use_failed" error. A Llama model does not do that.
 # Override without editing code:  WRITER_MODEL=<groq model name> in .env
+
+# chain_llm = ChatGroq(
+#     # model=os.getenv("WRITER_MODEL", "llama-3.3-70b-versatile"),
+#     # model="openai/gpt-oss-120b",
+#     model="qwen/qwen3.8-27b",
+
+#     temperature=0.3,
+# )
+
+
 chain_llm = ChatGroq(
     # model=os.getenv("WRITER_MODEL", "llama-3.3-70b-versatile"),
     # model="openai/gpt-oss-120b",
