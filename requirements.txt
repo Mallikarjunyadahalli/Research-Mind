@@ -37,3 +37,4 @@ beautifulsoup4
 requests
 python-dotenv
 langchain-mistralai 
+langchain-openai 

@@ -8,6 +8,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_mistralai import ChatMistralAI
 
 from tools import web_search, scarape_url
@@ -19,8 +20,8 @@ load_dotenv()
 # agent_llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 # agent_llm = ChatGroq(model="meta-llama/llama-prompt-guard-2-22m", temperature=0)
 
-agent_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
+agent_llm = ChatOpenAI(
+    model="gpt-5.4-mini",
     temperature=0
 )
 
