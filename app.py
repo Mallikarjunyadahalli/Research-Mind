@@ -9,7 +9,7 @@ import html
 import re
 import time
 from datetime import datetime
-
+import os
 import streamlit as st
 
 # set_page_config must be the first Streamlit call
@@ -19,6 +19,11 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+if "OPENAI_API_KEY" in st.secrets:
+    openai_api_key = st.secrets["OPENAI_API_KEY"]
+else:
+    openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # If your file is named agent.py, change this to: from agent import ...
 try:
