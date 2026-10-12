@@ -16,17 +16,15 @@ from tools import web_search, scarape_url
 from dotenv import load_dotenv
 load_dotenv()
 
-#   ChatGroq(model="openai/gpt-oss-20b", reasoning_effort="low")
 # agent_llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 # agent_llm = ChatGroq(model="meta-llama/llama-prompt-guard-2-22m", temperature=0)
 
 
 
 
-agent_llm = ChatOpenAI(
-    model="gpt-5.4-mini",
+agent_llm = ChatGroq(
+    model="openai/gpt-oss-120b",
     temperature=0,
-    api_key=os.getenv("OPENAI_API_KEY")
 )
 
 # agent_llm = ChatMistralAI(
@@ -36,7 +34,6 @@ agent_llm = ChatOpenAI(
 
 
 chain_llm = ChatGroq(
-    # model=os.getenv("WRITER_MODEL", "llama-3.3-70b-versatile"),
     # model="openai/gpt-oss-120b",
     model="openai/gpt-oss-20b",
 
